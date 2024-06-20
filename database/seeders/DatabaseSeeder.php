@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TitleSeeder::class);
         $this->call(FacultySeeder::class);
         $this->call(AccountSeeder::class);
+        $this->call(TaskSeeder::class);
     }
         // \App\Models\User::factory(10)->create();
         // $this ->call(account_status::class);
