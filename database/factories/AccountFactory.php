@@ -18,7 +18,7 @@ class AccountFactory extends Factory
     {
         return [
             'account_status_id'=>$this->faker->numberBetween(10000,99999),
-            'user_status_name'=>$this->faker->userName(),
+            'account_status_name'=>$this->faker->userName(),
             'created_at'=> now(),
             'updated_at' => now(),
             'created_by'=> now(),
