@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->string('account_status_id',5)->primary();
-            $table->string('user_status_name',20);
+            $table->string('account_status_name',20);
             $table->timestamp('created_by');
             $table->timestamp('updated_by');
             $table->timestamps();
