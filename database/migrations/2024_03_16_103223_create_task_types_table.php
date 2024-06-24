@@ -12,11 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('task_types', function (Blueprint $table) {
-            $table->string('type_id',5)->primary();
-            $table->string('type_name',20);
+            $table->string('type_id')->primary();
+            $table->string('type_name');
             $table->timestamp('created_by');
             $table->timestamp('updated_by');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

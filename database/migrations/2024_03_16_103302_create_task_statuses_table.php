@@ -12,11 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('task_statuses', function (Blueprint $table) {
-            $table->string('task_status_id',5)->primary();
-            $table->string('task_status_name',20);
+            $table->string('task_status_id')->primary();
+            $table->string('task_status_name');
             $table->timestamp('created_by');
             $table->timestamp('updated_by');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
