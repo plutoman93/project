@@ -17,7 +17,7 @@ class NotificationFactory extends Factory
     public function definition(): array
     {
         return [
-            'noti_time_id'=>$this->faker->password(),
+            'noti_time_id'=>$this->faker->numberBetween(10000,99999),
             'time_name'=>$this->faker->word(),
             'time'=>$this->faker->time(),
             'created_at'=> now(),
