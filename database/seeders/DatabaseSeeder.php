@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
         $this->call(FacultySeeder::class);
         $this->call(AccountSeeder::class);
         $this->call(TaskSeeder::class);
+        $this->call(TaskTypeSeeder::class);
+        $this->call(TaskStatusSeeder::class);
+        $this->call(NotificationSeeder::class);
     }
         // \App\Models\User::factory(10)->create();
         // $this ->call(account_status::class);
