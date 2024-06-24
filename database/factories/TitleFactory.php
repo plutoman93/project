@@ -17,7 +17,7 @@ class TitleFactory extends Factory
     public function definition(): array
     {
         return [
-            'title_id'=>$this->faker->numberBetween(10000,99999),
+            'title_id'=>$this->faker->unique()->numberBetween(1,10),
             'title_name'=>$this->faker->title(),
             'created_at'=> now(),
             'updated_at' => now(),
