@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <form method="POST" action="{{route('login')}}" class="login-form row">
+        @csrf
     <div class="wrapper">
         <h1>Login</h1>
         <div class="input-box">
@@ -31,5 +33,6 @@
 
         <button type="submit" class="btn">เข้าสู่ระบบ</button>
     </div>
+    </form>
 </body>
 </html>
