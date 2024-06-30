@@ -14,13 +14,11 @@
     <div class="wrapper">
         <h1>Login</h1>
         <div class="input-box">
-            <input type="text" placeholder="Username"
-            required>
+            <input type="text" id="username" class="form-control" name="username" placeholder="Username" required>
             <i class='bx bxs-user'></i>
         </div>
         <div class="input-box">
-            <input type="password" placeholder="Password"
-            required>
+            <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
             <i class='bx bxs-lock-alt' ></i>
         </div>
 
@@ -28,7 +26,7 @@
             <label>
                 <input type="checkbox">จดจำรหัสผ่าน
             </label>
-            <a href="#">ลืมรหัสผ่าน</a>
+            <a href="{{route('password.request')}}">ลืมรหัสผ่าน</a>
         </div>
 
         <button type="submit" class="btn">เข้าสู่ระบบ</button>
