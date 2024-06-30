@@ -20,7 +20,7 @@ body {
     background: purple;
     color: #fff;
     border-radius: 10px;
-    padding: 30px 40px;
+    padding: 50px 45px;
 }
 
 .wrapper h1 {
@@ -94,5 +94,6 @@ body {
     color: #333;
     font-weight: 600;
 }
+
 
 
