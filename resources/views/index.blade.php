@@ -23,7 +23,8 @@
   <!-- Daterange picker -->
   <link rel="stylesheet" href="http://127.0.0.1:8000/asset/backend/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
-  <link rel="stylesheet" href="http://127.0.0.1:8000/asset/backend/plugins/summernote/summernote-bs4.min.css">   @livewirestyle
+  <link rel="stylesheet" href="http://127.0.0.1:8000/asset/backend/plugins/summernote/summernote-bs4.min.css">
+  @livewireStyles
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -42,8 +43,8 @@
         <a href="index3.html" class="nav-link">Homeeiei</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <form method="POST" action="http://127.0.0.1:8000/logout">
-            <input type="hidden" name="_token" value="P7SaJfsWb0lWemCjoeXZH6c3EgkCAoVntTrO8iqQ" autocomplete="off">            <button type="submit" class="btn btn-danger">Logout</a>
+        <form method="POST" action="http://127.0.0.1:8000/login">
+            <input type="hidden" name="_token" value="P7SaJfsWb0lWemCjoeXZH6c3EgkCAoVntTrO8iqQ" autocomplete="off">            <button type="submit" class="btn btn-danger" href="{{route('login')}}">Logout</a>
         </form>
       </li>
     </ul>
@@ -892,6 +893,6 @@
 <script src="http://127.0.0.1:8000/asset/backend/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="http://127.0.0.1:8000/asset/backend/dist/js/pages/dashboard.js"></script>
-   @livewirescripts
+@livewireScripts
 </body>
 </html>
