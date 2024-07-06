@@ -14,7 +14,12 @@
             <a href="index.html">
                 <img src="asset/frontend/images/logos/logo_RMUTI.png" class="logonav">
             </a>
+
+            <div class="nav-deapartname">
+                <p class="nav-deapartname">ระบบจัดการข้อมูลตารางงาน สาขาเทคโนโลยีคอมพิวเตอร์</p>
+            </div>
         </div>
+
     </nav>
 </body>
 </html>
