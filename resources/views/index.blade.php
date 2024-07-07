@@ -40,11 +40,11 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Homeeiei</a>
+        <a href="{{route('login')}}" class="nav-link">Homeeiei</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <form method="POST" action="http://127.0.0.1:8000/login">
-            <input type="hidden" name="_token" value="P7SaJfsWb0lWemCjoeXZH6c3EgkCAoVntTrO8iqQ" autocomplete="off">            <button type="submit" class="btn btn-danger" href="{{route('login')}}">Logout</a>
+            <input type="hidden" name="_token" value="P7SaJfsWb0lWemCjoeXZH6c3EgkCAoVntTrO8iqQ" autocomplete="off">            <button type="submit" class="btn btn-danger">Logout</a>
         </form>
       </li>
     </ul>
