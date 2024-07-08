@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\SUpport\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use App\Models\User;
 
-class UserController extends Controller
+class AuthController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,17 +37,15 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(User $id)
+    public function show(string $id)
     {
-        $user = User::findOrFail($id);
-
-        return view('users.profile', ['user' => $user]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(User $user)
+    public function edit(string $id)
     {
         //
     }
@@ -53,7 +53,7 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -61,8 +61,13 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User $user)
+    public function destroy(string $id)
     {
         //
+    }
+    public function logout()
+    {
+    Auth::logout();
+    return redirect('/login');
     }
 }
