@@ -24,13 +24,13 @@ Route::get('/', function () {
 //     return view('login');
 // });
 Route::get('/login', function () {
-    return view('auth.login');
+    return view('login');
 })->name('login');
 
-Route::post('/logout', function () {
-    // ทำการ Logout โดยไม่ต้องเช็คบัญชีผู้ใช้
-    Auth::logout();
-    return redirect('/login');
-})->name('logout');
+// Route::post('/logout', function () {
+//     // ทำการ Logout โดยไม่ต้องเช็คบัญชีผู้ใช้
+//     Auth::logout();
+//     return redirect('/login');
+// })->name('logout');
 
 // return redirect()->route('login');
