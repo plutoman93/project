@@ -19,9 +19,7 @@ nav {
 .nav-container {
     max-width: 90vw;
     height: 100%;
-    margin-left: 50px;
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
     font-size: 40px;
     color: #fff;
@@ -31,11 +29,12 @@ nav {
 .logonav {
     width: 3.5vw;
     object-fit: contain;
+    margin-left: 50px;
 
 }
 
 .nav-departname p{
-    margin-left: 70px;
+    margin-left: 20px;
 }
 
 .nav-about a {
@@ -70,4 +69,5 @@ nav {
     height: 100%;
     padding: 10px;
     background: gray;
+    font-size: 20px;
 }

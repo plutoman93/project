@@ -14,8 +14,8 @@
                 <img src="asset/frontend/images/logos/logo_RMUTI.png" class="logonav">
             </a>
 
-            <div class="nav-deapartname">
-                <p class="nav-deapartname">ระบบจัดการข้อมูลตารางงาน สาขาเทคโนโลยีคอมพิวเตอร์</p>
+            <div class="nav-departname">
+                <p class="nav-departname">ระบบจัดการข้อมูลตารางงาน สาขาเทคโนโลยีคอมพิวเตอร์</p>
             </div>
 
             <div class="nav-about">
