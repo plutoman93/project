@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 
 /*
@@ -18,8 +20,17 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::post('/login',function(){
-    return view('login');
-});
+// Route::post('/login',function(){
+//     return view('login');
+// });
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::post('/logout', function () {
+    // ทำการ Logout โดยไม่ต้องเช็คบัญชีผู้ใช้
+    Auth::logout();
+    return redirect('/login');
+})->name('logout');
 
 // return redirect()->route('login');
