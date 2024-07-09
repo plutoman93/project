@@ -29,6 +29,20 @@
 
         <div class="container">
             <div class="sidebar">
-                dgfhgj
+                <a href="#" class="sidebar-item">
+                    ตารางงาน
+                </a>
+
+                <a href="#" class="sidebar-item">
+                    รายงาน
+                </a>
+
+                <a href="#" class="sidebar-item">
+                    ตั้งค่าบัญชี
+                </a>
+
+                <a href="#" class="sidebar-item">
+                    ตั้งค่าระบบ
+                </a>
             </div>
         </div>
