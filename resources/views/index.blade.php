@@ -34,6 +34,10 @@
                 </a>
 
                 <a href="#" class="sidebar-item">
+                    บุคลากร
+                </a>
+
+                <a href="#" class="sidebar-item">
                     รายงาน
                 </a>
 
