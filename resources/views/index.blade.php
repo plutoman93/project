@@ -23,7 +23,8 @@
             </div>
 
             <div class="nav-logout">
-                <button type="submit" class="btn">ออกจากระบบ</button>
+                {{-- <button type="submit" href="{{route('login')}}" class="btn btn-danger">ออกจากระบบ</button> --}}
+                <a href="{{route('login')}}" class="btn btn-danger">ออกจากระบบ</a>
             </div>
         </div>
 
