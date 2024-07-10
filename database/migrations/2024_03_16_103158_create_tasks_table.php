@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('start_date');
             $table->string('due_date');
             $table->string('file',2048)->nullable();
-            $table->foreignId('status_task_id')->index();
+            $table->foreignId('task_status_id')->index();
             $table->foreignId('type_id')->index();
             $table->foreignId('user_id')->index();
             $table->timestamp('created_by');

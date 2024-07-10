@@ -22,7 +22,7 @@ class TaskFactory extends Factory
             'task_detail'=>$this->faker->word(),
             'start_date'=>$this->faker->dateTime(),
             'due_date'=>$this->faker->dateTime(),
-            'status_task_id'=>$this->faker->numberBetween(10000,99999),
+            'task_status_id'=>$this->faker->numberBetween(10000,99999),
             'type_id'=>$this->faker->numberBetween(10000,99999),
             'user_id'=>$this->faker->numberBetween(10000,99999),
             'created_at'=> now(),
