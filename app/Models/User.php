@@ -12,6 +12,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 use Livewire\WithFileUploads as LivewireWithFileUploads;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -31,8 +32,22 @@ class User extends Authenticatable
     //     'email',
     //     'password',
     // ];
+    public function user()
+    {
+        return $this->hasOne(Status::class);
+    }
 
-    protected $guarded =[];
+    public function department()
+    {
+        return $this->hasOne(Department::class);
+    }
+
+    public function user_status()
+    {
+        return $this->hasOne(Title::class);
+    }
+
+    protected $guarded = [];
     /**
      * The attributes that should be hidden for serialization.
      *
