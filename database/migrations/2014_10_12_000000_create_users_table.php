@@ -18,14 +18,14 @@ return new class extends Migration
             $table->foreignId('title_id')->nullable()->index();
             $table->string('first_name',20)->nullable();
             $table->string('last_name',20)->nullable();
-            $table->string('department_id',5)->nullable();
+            $table->foreignId('department_id')->index();
             $table->string('phone')->nullable();
             // $table->string('photo',2048);
             $table->string('email')->unique();
             $table->foreignId('account_status_id')->nullable()->index();
             $table->foreignId('user_status_id')->index();
-            $table->timestamp('created_by');
-            $table->timestamp('updated_by');
+            $table->foreignId('created_by');
+            $table->foreignId('updated_by');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
