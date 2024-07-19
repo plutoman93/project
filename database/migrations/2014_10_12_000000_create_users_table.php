@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->foreignId('account_status_id')->nullable()->index();
             $table->foreignId('user_status_id')->index();
-            $table->timestamp('created_by');
-            $table->timestamp('updated_by');
+            $table->foreignId('created_by');
+            $table->foreignId('updated_by');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

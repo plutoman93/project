@@ -11,6 +11,6 @@ class Status extends Model
 
     public function status()
     {
-        return $this->hasOne(User::class);
+        return $this->hasMany(User::class,'user_status_id','user_status_id');
     }
 }

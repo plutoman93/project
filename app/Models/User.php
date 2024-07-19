@@ -37,14 +37,31 @@ class User extends Authenticatable
         return $this->hasOne(Status::class);
     }
 
+    // public function department()
+    // {
+    //     return $this->belongsTo(Department::class, 'department_id', 'department_id');
+    // }
+
     public function department()
     {
-        return $this->hasOne(Department::class);
+        return $this->hasOne(Department::class, 'department_id', 'department_id');
     }
 
-    public function user_status()
+    public function status()
     {
-        return $this->hasOne(Title::class);
+        return $this->belongsTo(Status::class,'user_status_id','user_status_id');
+    }
+    public function title()
+    {
+        return $this->belongsTo(Title::class,'title_id','title_id');
+    }
+    public function account()
+    {
+        return $this->belongsTo(Account::class,'account_status_id','account_status_id');
+    }
+    public function task()
+    {
+        return $this->belongsTo(Task::class,'user_id','user_id');
     }
 
     protected $guarded = [];
