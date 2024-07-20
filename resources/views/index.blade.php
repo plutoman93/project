@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('asset/frontend/css/style2.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/frontend/css/bootstrap.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('asset/frontend/css/bootstrap.min.css') }}"> --}}
 </head>
 <body>
     <nav>
@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+        {{-- <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
               <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
               <span class="fs-4">Sidebar</span>
@@ -87,9 +87,9 @@
                 <li><a class="dropdown-item" href="#">Sign out</a></li>
               </ul>
             </div>
-          </div>
+          </div> --}}
 
-        {{-- <div class="container">
+        <div class="container">
             <div class="sidebar">
                 <a href="#" class="sidebar-item">
                     ตารางงาน
@@ -111,4 +111,4 @@
                     ตั้งค่าระบบ
                 </a>
             </div>
-        </div> --}}
+        </div>
