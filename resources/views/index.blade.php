@@ -91,24 +91,28 @@
 
         <div class="container">
             <div class="sidebar">
-                <a href="#" class="sidebar-item">
+                <a href="{{route('schedule')}}" class="sidebar-item">
                     ตารางงาน
                 </a>
 
-                <a href="#" class="sidebar-item">
+                <a href="{{route('personnel')}}" class="sidebar-item">
                     บุคลากร
                 </a>
 
-                <a href="#" class="sidebar-item">
+                <a href="{{route('report')}}" class="sidebar-item">
                     รายงาน
                 </a>
 
-                <a href="#" class="sidebar-item">
+                <a href="{{route('account-setting')}}" class="sidebar-item">
                     ตั้งค่าบัญชี
                 </a>
 
-                <a href="#" class="sidebar-item">
+                <a href="{{route('setting')}}" class="sidebar-item">
                     ตั้งค่าระบบ
                 </a>
             </div>
         </div>
+        <div class="content">
+            @yield('content')
+        </div>
+</body>
