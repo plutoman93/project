@@ -115,4 +115,5 @@
         <div class="content">
             @yield('content')
         </div>
-</body>
+    </nav>
+    </body>
