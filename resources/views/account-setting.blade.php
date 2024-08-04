@@ -1,3 +1,8 @@
+@extends('layouts.layout')
+
+@section('title','account-setting')
 @section('content')
-    <h1>Home Page</h1>
+<div class="textposition">
+    <p>this is the account-setting page</p>
+</div>
 @endsection

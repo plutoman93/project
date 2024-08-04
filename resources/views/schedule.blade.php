@@ -1,3 +1,9 @@
+@extends('layouts.layout')
+
+@section('title','Schedule')
+
 @section('content')
-    <h1>Home Page</h1>
+<div class="textposition">
+    <p>this is the schedule page</p>
+</div>
 @endsection
