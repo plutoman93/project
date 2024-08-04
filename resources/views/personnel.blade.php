@@ -1,3 +1,8 @@
+@extends('layouts.layout')
+
+@section('title','personnel')
 @section('content')
-    <h1>Home Page</h1>
+<div class="textposition">
+    <p>this is the personnel page</p>
+</div>
 @endsection

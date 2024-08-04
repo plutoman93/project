@@ -1,3 +1,9 @@
+@extends('layouts.layout')
+
+@section('title','Page')
+
 @section('content')
-    <h1>Home Page</h1>
+<div class="textposition">
+    <p>this is the report page</p>
+</div>
 @endsection
