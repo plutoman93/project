@@ -65,6 +65,14 @@ nav {
     /* margin: 0 auto; */
 }
 
+.textposition {
+    display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 100% of the viewport height */
+            text-align: center;
+}
+
 .sidebar {
     width: 20%;
     padding: 10px;
