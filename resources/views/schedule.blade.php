@@ -4,6 +4,6 @@
 
 @section('content')
 <div class="textposition">
-    <p>this is the schedule page</p>
+    <h1>Schedule</h1><br>
 </div>
 @endsection

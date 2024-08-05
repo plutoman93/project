@@ -3,6 +3,6 @@
 @section('title','Setting')
 @section('content')
 <div class="textposition">
-    <p>this is the setting page</p>
+    <h1>Setting</h1><br>
 </div>
 @endsection

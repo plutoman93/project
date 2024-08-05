@@ -3,6 +3,6 @@
 @section('title','account-setting')
 @section('content')
 <div class="textposition">
-    <p>this is the account-setting page</p>
+    <h1>Account Setting</h1>
 </div>
 @endsection
