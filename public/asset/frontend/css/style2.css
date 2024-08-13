@@ -61,7 +61,7 @@ nav {
 
 .container {
     width: 100vw;
-    background: yellow;
+    background: rgb(209, 209, 204);
     /* margin: 0 auto; */
 }
 
@@ -97,3 +97,35 @@ nav {
     color: #fff;
 
 }
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.breadcrumb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    /* background-color: #e9ecef; */
+    border-radius: 0.25rem;
+
+}
+.float-sm-right {
+    float: right;
+  }

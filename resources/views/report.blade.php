@@ -4,6 +4,6 @@
 
 @section('content')
 <div class="textposition">
-    <p>this is the report page</p>
+    <h1>Report</h1>
 </div>
 @endsection
