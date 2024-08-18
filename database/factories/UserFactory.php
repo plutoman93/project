@@ -28,7 +28,7 @@ class UserFactory extends Factory
             'user_id' => $this->faker->numerify(),
             'first_name' => $this->faker->firstName(),
             'last_name' => $this->faker->lastName(),
-            'email' => $this->faker->unique()->safeEmail,
+            'email' => $this->faker->unique()->safeEmail(),
             'username' => $this->faker->userName(),
             'title_id' => $this->faker->numberBetween(1,10),
             'department_id' => $this->faker->numberBetween(10000,99999),

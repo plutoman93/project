@@ -10,6 +10,21 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+    public function showLoginForm()
+    {
+        return view('views.login');
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            return redirect()->intended('/admin_home');
+        }
+
+        return redirect('/login')->with('error', 'Invalid credentials. Please try again.');
+    }
     /**
      * Display a listing of the resource.
      */
