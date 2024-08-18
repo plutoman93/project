@@ -92,6 +92,7 @@ return [
 
     'passwords' => [
         'users' => [
+            'driver' => 'bcrypt',
             'provider' => 'users',
             'table' => 'password_reset_tokens',
             'expire' => 60,

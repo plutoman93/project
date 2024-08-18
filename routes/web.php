@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +20,15 @@ Route::get('/', function () {
     return view('admin_home');
 });
 
+Route::get('/login', [UserController::class, 'showLoginForm']);
+Route::post('/login', [UserController::class, 'login'])->name('login');
 // Route::post('/login',function(){
 //     return view('login');
 // });
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+
+// Route::get('/admin_home', function () {
+//     return view('admin_home');
+// })->name('admin_home');
 
 Route::get('/schedule', function(){
     return view('schedule');

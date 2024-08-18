@@ -12,35 +12,37 @@
 </head>
 
 <body>
+    <form method="POST" action="{{ route('login') }}" class="login-form row">
+        @csrf
     <div class="wrapper">
         <h1>Login</h1>
-        <div class="input-box">
-            <input type="text" id="username" class="form-control" name="username" placeholder="Username" required>
-            <i class='bx bxs-user'></i>
-        </div>
-        <div class="input-box">
-            <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
-            <i class='bx bxs-lock-alt'></i>
-        </div>
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+            <div class="input-box">
+                <input type="text" id="loginemail" class="form-control" name="email" placeholder="Enter mail"required>
+                <i class='bx bxs-user'></i>
             </div>
-        @endif
-        <div class="remember-forgot">
-            <label>
-                <input type="checkbox">จดจำรหัสผ่าน
-            </label>
-            <a href="{{ route('password.request') }}">ลืมรหัสผ่าน</a>
-        </div>
+            <div class="input-box">
+                <input type="password" id="password" class="form-control" name="password" placeholder="Password"
+                    required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox">จดจำรหัสผ่าน <br>
+                </label>
+                <a href="{{ route('password.request') }}">ลืมรหัสผ่าน</a>
+            </div>
 
-        <button type="submit" class="btn">เข้าสู่ระบบ</button>
+            <button type="submit" class="btn">เข้าสู่ระบบ</button>
     </div>
     </form>
 </body>
-
 </html>
