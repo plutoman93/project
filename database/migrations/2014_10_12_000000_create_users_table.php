@@ -13,19 +13,20 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             // $table->id();
-            $table->string('user_id')->primary(); //Column ตามตาราง <--
-            $table->string('username',255)->nullable();
+            $table->id('user_id'); //Column ตามตาราง <--
+            $table->string('username',255);
             $table->foreignId('title_id')->nullable()->index();
             $table->string('first_name',20)->nullable();
             $table->string('last_name',20)->nullable();
-            $table->foreignId('department_id')->index();
+            $table->foreignId('department_id')->nullable();
             $table->string('phone')->nullable();
+            $table->boolean('is_admin')->nullable();
             // $table->string('photo',2048);
             $table->string('email')->unique();
-            $table->foreignId('account_status_id')->nullable()->index();
-            $table->foreignId('user_status_id')->index();
-            $table->foreignId('created_by');
-            $table->foreignId('updated_by');
+            $table->foreignId('account_status_id')->nullable();
+            $table->foreignId('user_status_id')->nullable();
+            $table->foreignId('created_by')->comment('สร้างโดย user_id')->nullable();
+            $table->foreignId('updated_by')->comment('แก้ไขโดย user_id')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
