@@ -1,48 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
-    {{-- 55 --}}
-    <link rel="stylesheet" href="{{ asset('asset/frontend/css/style1.css') }}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel Custom - Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <form method="POST" action="{{ route('login') }}" class="login-form row">
-        @csrf
-    <div class="wrapper">
-        <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" id="loginemail" class="form-control" name="email" placeholder="Enter mail"required>
-                <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" id="password" class="form-control" name="password" placeholder="Password"
-                    required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
+<div class="row justify-content-center mt-5">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="card-title">Login</h1>
                 </div>
-            @endif
-            <div class="remember-forgot">
-                <label>
-                    <input type="checkbox">จดจำรหัสผ่าน <br>
-                </label>
-                <a href="{{ route('password.request') }}">ลืมรหัสผ่าน</a>
+                <div class="card-body">
+                    @if(Session::has('error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ Session::get('error') }}
+                        </div>
+                    @endif
+                    <form action="{{ route('login') }}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-grid">
+                                <button class="btn btn-primary">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <button type="submit" class="btn">เข้าสู่ระบบ</button>
+        </div>
     </div>
-    </form>
 </body>
 </html>
