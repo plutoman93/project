@@ -26,7 +26,7 @@
                                 data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
                                 Home
                             </button>
-                            <div class="collapse show" id="home-collapse">
+                            <div class="collapse " id="home-collapse">
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                     <li><a href="#"
                                             class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a>
