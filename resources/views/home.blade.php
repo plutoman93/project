@@ -42,6 +42,30 @@
                         </li>
                         <li class="mb-1">
                             <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#schedule-collapse" aria-expanded="false">
+                                Schedule
+                            </button>
+                            <div class="collapse" id="schedule-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Schedule
+                                            check</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Add
+                                            work</a>
+                                    </li>
+                                    {{-- <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a>
+                                    </li> --}}
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                                 data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
                                 Dashboard
                             </button>
@@ -70,7 +94,8 @@
                             <div class="collapse" id="orders-collapse">
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                     <li><a href="#"
-                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a>
+                                    </li>
                                     <li><a href="#"
                                             class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a>
                                     </li>
@@ -101,7 +126,8 @@
                                             class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a>
                                     </li>
                                     <li><a href="#"
-                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a>
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign
+                                            out</a>
                                     </li>
                                 </ul>
                             </div>
