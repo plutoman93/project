@@ -73,3 +73,16 @@ Route::group(['middleware' => 'auth'], function () {
         return view('project.viewtask',compact('id'));
     })->name('project-viewtask');
 
+    Route::get('/project-add',function(){
+        return view('project.add');
+    })->name('project-add');
+
+
+    Route::get('/project-addtask',function(){
+        return view('livewire.project.addtask');
+    })->name('project-addtask');
+
+
+    Route::get('addtask',function(){
+        return view('addtask');
+    })->name('addtask');
