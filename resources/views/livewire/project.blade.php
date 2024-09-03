@@ -27,7 +27,7 @@
           <h3 class="card-title">Add User</h3>
         <div>
             <br>
-            <a class="btn btn-primary" href="{{route('project-add')}}">
+            <a class="btn btn-primary" href="#">
               <i class="fas fa-folder">
                 </i>
                 Create
@@ -83,7 +83,7 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="{{asset('storage')}}/{{$item->profile_photo_path}}">
+                                  <img alt="Avatar" class="table-avatar" src="#">
                               </li>
                           </ul>
                       </td>
@@ -94,12 +94,12 @@
                           <span class="badge badge-success">Success</span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="{{route('project-view',['id' =>$item->id])}}">
+                          <a class="btn btn-primary btn-sm" href="#">
                               <i class="fas fa-folder">
                               </i>
                               View
                           </a>
-                          <a class="btn btn-info btn-sm" href="{{route('project-edit',['id' =>$item->id])}}">
+                          <a class="btn btn-info btn-sm" href="#">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
