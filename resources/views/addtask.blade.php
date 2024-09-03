@@ -1,6 +1,7 @@
 @extends('layouts.backend.master')
-@section ('content')
 
-<div>home</div>
+@section('content')
+
+@livewire('addtask')
 
 @endsection

@@ -2,6 +2,6 @@
 
 @section('content')
 
-@livewire('project.add')
+@livewire('project.edittask')
 
 @endsection
