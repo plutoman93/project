@@ -1,27 +1,44 @@
 <?php
 
 namespace App\Livewire;
-
-use App\Models\User;
 use Livewire\Component;
-use Livewire\Withpagination;
+use App\Models\Task;
 
 class Addtask extends Component
 {
-    use WithPagination;
-    protected $paginationTheme = 'bootstrap';
 
-    public function delete($idd){
+    public $task_name, $task_detail, $start_date, $due_date, $task_file, $task_type, $status_task;
 
-        $model = User::find($idd);
-        $model->deleted_by = auth()->Auth::user()->id;
-        $model->save();
-        $model->delete();
+    public function add()
+    {
+        // Validate input fields
+        $this->validate([
+            'task_name' => 'required|string|max:255',
+            'task_detail' => 'required|string|max:1000',
+            'start_date' => 'required|date',
+            'due_date' => 'required|date|after_or_equal:start_date',
+            'task_file' => 'nullable|file|max:10240', // 10MB Max
+            'task_type' => 'required|string',
+            'status_task' => 'required|string',
+        ]);
+
+        // Save task to the database
+        Task::create([
+            'task_name' => $this->task_name,
+            'task_detail' => $this->task_detail,
+            'start_date' => $this->start_date,
+            'due_date' => $this->due_date,
+            'task_type' => $this->task_type,
+            'status_task' => $this->status_task,
+        ]);
+
+        // Redirect or reset form fields
+        session()->flash('success', 'Task added successfully');
+        $this->reset();
     }
 
     public function render()
     {
-        $data = User::Paginate(10);
-        return view('livewire.addtask')->with(compact('data'));
+        return view('livewire.addtask');
     }
 }
