@@ -26,6 +26,20 @@
                             <label for="name" class="form-label">Username</label>
                             <input type="text" name="username" class="form-control" id="username" placeholder="Axxxxx" required>
                         </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="first_name" class="form-label">First Name</label>
+                                <input type="text" name="first_name" class="form-control" id="first_name" placeholder="ชื่อต้น" required>
+                            </div>
+                            <div class="col">
+                                <label for="last_name" class="form-label">Last Name</label>
+                                <input type="text" name="last_name" class="form-control" id="last_name" placeholder="นามสกุล" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Phone</label>
+                            <input type="text" name="phone" class="form-control" id="phone" placeholder="เบอร์มือถือ" required>
+                        </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" required>
