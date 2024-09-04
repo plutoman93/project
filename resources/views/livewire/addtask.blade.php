@@ -36,25 +36,25 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="inputName">Task Name</label>
-                    <input type="text" id="inputName" wire:model="task_name" class="form-control">
+                    <input type="text" id="task_name" wire:model="task_name" class="form-control">
                     @error('task_name')
                         <span class ="text-danger">{{$message}}</span>
                     @enderror
                   </div>
                   <div class="form-group">
                     <label for="inputName">Task Detail</label>
-                    <input type="text" id="inputName" wire:model="task_detail" class="form-control">
+                    <input type="text" id="task_detail" wire:model="task_detail" class="form-control">
                     @error('task_detail')
                         <span class ="text-danger">{{$message}}</span>
                     @enderror
                   </div>
                   <div class="form-group">
                     <label for="inputName">Start Date</label>
-                    <input type="date" id="inputName" wire:model="task_start_date" class="form-control">
+                    <input type="date" id="start_date" wire:model="start_date" class="form-control">
                   </div>
                   <div class="form-group">
                     <label for="inputName">Due Date</label>
-                    <input type="date" id="inputName" wire:model="task_due_date" class="form-control">
+                    <input type="date" id="due_date" wire:model="due_date" class="form-control">
                   </div>
                   <div class="form-group">
                     <label for="inputName">File</label>
@@ -83,98 +83,11 @@
               <!-- /.card -->
             </div>
           </div>
-
-          <div class="card-body p-0">
-            <table class="table table-striped projects">
-                <thead>
-                    <tr>
-                        <th style="width: 1%">
-                            No.
-                        </th>
-                        <th style="width: 20%">
-                            Task Name
-                        </th>
-                        <th style="width: 20%">
-                            Task Detail
-                        </th>
-                        <th style="width: 20%">
-                            Start Date
-                        </th>
-                        <th style="width: 20%">
-                            Due Date
-                        </th>
-                        <th style="width: 20%">
-                            Task Type
-                        </th>
-                        <th style="width: 8%" class="text-center">
-                            Status
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                  @foreach ($data as $item)
-                  <tr>
-                        <td>
-                            {{$item->id}}
-                        </td>
-                        <td>
-                            <a>
-                                {{$item->task_name}}
-                            </a>
-                        </td>
-                        <td>
-                            <a>
-                                {{$item->task_detail}}
-                            </a>
-                        </td>
-                        <td>
-                            <a>
-                                {{$item->task_start_date}}
-                            </a>
-                        </td>
-                        <td>
-                            <a>
-                                {{$item->task_due_date}}
-                            </a>
-                        </td>
-                        <td>
-                            <a>
-                                {{$item->task_type}}
-                            </a>
-                        </td>
-                        <td>
-                            <a>
-                                {{$item->status_task}}
-                            </a>
-                        </td>
-                        <td class="project-actions text-right">
-                            <a class="btn btn-primary btn-sm" href="#">
-                                <i class="fas fa-folder">
-                                </i>
-                                View
-                            </a>
-                            <a class="btn btn-info btn-sm" href="{#}">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                            <a class="btn btn-danger btn-sm" wire:click="delete({{$item->id}})" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
-                  @endforeach
-                </tbody>
-            </table>
-
           <div class="row">
             <div class="col-12">
               <a href="#" class="btn btn-secondary">Cancel</a>
               <button type="submit" class="btn btn-success ">Add</button>
             </div>
-
           </div>
           </form>
     </section>
