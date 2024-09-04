@@ -147,12 +147,12 @@
                             </a>
                         </td>
                         <td class="project-actions text-right">
-                            <a class="btn btn-primary btn-sm" href="{{route('project-viewtask',['id' =>$item->id])}}">
+                            <a class="btn btn-primary btn-sm" href="#">
                                 <i class="fas fa-folder">
                                 </i>
                                 View
                             </a>
-                            <a class="btn btn-info btn-sm" href="{{route('project-edittask',['id' =>$item->id])}}">
+                            <a class="btn btn-info btn-sm" href="{#}">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
