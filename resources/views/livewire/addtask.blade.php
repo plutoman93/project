@@ -83,6 +83,7 @@
               <!-- /.card -->
             </div>
           </div>
+
           <div class="card-body p-0">
             <table class="table table-striped projects">
                 <thead>
@@ -167,6 +168,13 @@
                   @endforeach
                 </tbody>
             </table>
+
+          <div class="row">
+            <div class="col-12">
+              <a href="#" class="btn btn-secondary">Cancel</a>
+              <button type="submit" class="btn btn-success ">Add</button>
+            </div>
+
           </div>
           </form>
     </section>
