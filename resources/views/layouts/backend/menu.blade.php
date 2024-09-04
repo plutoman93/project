@@ -22,51 +22,65 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Menu
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('projects')}}" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add User</p>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>
+                        ตารางงาน
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
                 </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('profile')}}" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Profile Setting</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('addtask')}}" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Task</p>
-                </a>
-              </li>
-          <li class="nav-item">
-            <a href="{{route('news')}}" class="nav-link ">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                ETC
-              </p>
-            </a>
-          </li>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{route('projects')}}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>ตารางงาน</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('addtask')}}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>เพิ่มงาน</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
-        <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
-            @csrf
-            @method('DELETE')
-            <button class="btn btn-danger" type="submit">Logout</button>
-        </form>
+    </nav>
 
-      </nav>
+    <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>
+                        บุคลากร
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{route('projects')}}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>บุคลากร</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('addtask')}}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>เพิ่มบุคลากร</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+      <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+        @csrf
+        @method('DELETE')
+        <button class="btn btn-logout" type="submit">Logout</button>
+    </form>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
