@@ -48,7 +48,7 @@
         </ul>
     </nav>
 
-    {{-- <nav class="mt-2">
+    <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -74,7 +74,7 @@
                 </ul>
             </li>
         </ul>
-    </nav> --}}
+    </nav>
 
       <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
         @csrf
