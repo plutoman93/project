@@ -377,12 +377,22 @@ blockquote.pull-left {
 }
 
 .btn-primary {
-  background: #dc3545;
+  background: #00d154;
 }
-.btn-primary:hover {
-  background: #d32535;
-  color: #fff;
-}
+.btn-primary {
+    background: #00d154;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute; /* ทำให้ปุ่มสามารถวางตำแหน่งได้อย่างอิสระใน sidebar */
+    bottom: 50px; /* ห่างจากขอบล่างของ sidebar 50px */
+    left: 50%; /* กึ่งกลางในแนวนอน */
+    transform: translateX(-50%); /* ปรับให้อยู่กลางในแนวนอน */
+    margin: 0 auto;
+    width: 30%; /* กำหนดความกว้างของปุ่ม */
+  }
 
 .btn-dark {
   background: #292931;
