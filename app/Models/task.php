@@ -14,7 +14,7 @@ class Task extends Model
         'task_detail',
         'start_date',
         'due_date',
-        'task_file',
+        'file',
         'task_type',
         'status_task'
     ];
