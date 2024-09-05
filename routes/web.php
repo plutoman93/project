@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Livewire\AddTask;
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
 
 Route::get('/home', function () {
