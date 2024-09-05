@@ -1,38 +1,33 @@
 <?php
 
 namespace App\Livewire;
+
+use App\Http\Controllers\ScheduleController;
 use Livewire\Component;
-use App\Models\Task;
+use Livewire\WithFileUploads;
+ // เรียกใช้ Controller ที่สร้างไว้
 
-class Addtask extends Component
+class AddTask extends Component
 {
-
+    use WithFileUploads;
     public $task_name, $task_detail, $start_date, $due_date, $task_file, $task_type, $status_task;
 
     public function add()
     {
-        // Validate input fields
-        $this->validate([
+        $validatedData = $this->validate([
             'task_name' => 'required|string|max:255',
             'task_detail' => 'required|string|max:1000',
             'start_date' => 'required|date',
             'due_date' => 'required|date|after_or_equal:start_date',
-            'task_file' => 'nullable|file|max:10240', // 10MB Max
+            'task_file' => 'nullable|file|max:10240',
             'task_type' => 'required|string',
             'status_task' => 'required|string',
         ]);
 
-        // Save task to the database
-        Task::create([
-            'task_name' => $this->task_name,
-            'task_detail' => $this->task_detail,
-            'start_date' => $this->start_date,
-            'due_date' => $this->due_date,
-            'task_type' => $this->task_type,
-            'status_task' => $this->status_task,
-        ]);
+        // เรียกใช้ Controller ในการบันทึกข้อมูล
+        $scheduleController = new ScheduleController();
+        $scheduleController->storeTask($validatedData);
 
-        // Redirect or reset form fields
         session()->flash('success', 'Task added successfully');
         $this->reset();
     }
@@ -42,3 +37,4 @@ class Addtask extends Component
         return view('livewire.addtask');
     }
 }
+
