@@ -387,7 +387,7 @@ blockquote.pull-left {
     font-size: 16px;
     cursor: pointer;
     position: absolute; /* ทำให้ปุ่มสามารถวางตำแหน่งได้อย่างอิสระใน sidebar */
-    bottom: 50px; /* ห่างจากขอบล่างของ sidebar 50px */
+    bottom: 5px; /* ห่างจากขอบล่างของ sidebar 50px */
     left: 50%; /* กึ่งกลางในแนวนอน */
     transform: translateX(-50%); /* ปรับให้อยู่กลางในแนวนอน */
     margin: 0 auto;
