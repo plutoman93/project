@@ -378,8 +378,8 @@ class ComposerStaticInit91216f33c7cc32f91364dacb3e9152df
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -611,6 +611,11 @@ class ComposerStaticInit91216f33c7cc32f91364dacb3e9152df
         'App\\Http\\Controllers\\SettingController' => __DIR__ . '/../..' . '/app/Http/Controllers/SettingController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Livewire\\AddTask' => __DIR__ . '/../..' . '/app/Http/Livewire/AddTask.php',
+        'App\\Http\\Livewire\\Counter' => __DIR__ . '/../..' . '/app/Http/Livewire/Counter.php',
+        'App\\Http\\Livewire\\Index' => __DIR__ . '/../..' . '/app/Http/Livewire/Index.php',
+        'App\\Http\\Livewire\\Profile' => __DIR__ . '/../..' . '/app/Http/Livewire/Profile.php',
+        'App\\Http\\Livewire\\Project' => __DIR__ . '/../..' . '/app/Http/Livewire/Project.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\IsAdmin' => __DIR__ . '/../..' . '/app/Http/Middleware/IsAdmin.php',
@@ -621,8 +626,6 @@ class ComposerStaticInit91216f33c7cc32f91364dacb3e9152df
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Livewire\\Counter' => __DIR__ . '/../..' . '/app/Livewire/Counter.php',
-        'App\\Livewire\\Index' => __DIR__ . '/../..' . '/app/Livewire/Index.php',
         'App\\Models\\Account' => __DIR__ . '/../..' . '/app/Models/Account.php',
         'App\\Models\\Demo' => __DIR__ . '/../..' . '/app/Models/Demo.php',
         'App\\Models\\Department' => __DIR__ . '/../..' . '/app/Models/Department.php',
