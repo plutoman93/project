@@ -39,7 +39,7 @@ class AddTask extends Component
 
     public function render()
     {
-        return view('livewire.addtask');
+        return view('livewire.addtask')->with(compact('data'));
     }
 }
 

@@ -37,46 +37,33 @@
                   <div class="form-group">
                     <label for="inputName">เพิ่มคำนำหน้า</label>
                     <input type="text" id="title_name" wire:model="title_name" class="form-control">
-                    @error('task_name')
+                    @error('title_name')
                         <span class ="text-danger">{{$message}}</span>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="inputName">รายละเอียดงาน</label>
-                    <input type="text" id="task_detail" wire:model="task_detail" class="form-control">
-                    @error('task_detail')
+                    <label for="inputName">เพิ่มสาขา</label>
+                    <input type="text" id="department_name" wire:model="department_name" class="form-control">
+                    @error('department_name')
                         <span class ="text-danger">{{$message}}</span>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="inputName">วันที่เริ่มงาน</label>
-                    <input type="date" id="start_date" wire:model="start_date" class="form-control">
+                    <label for="inputName">เพิ่มคณะ</label>
+                    <input type="text" id="facuty_name" wire:model="faculty_name" class="form-control">
+                    @error('faculty_name')
+                        <span class ="text-danger">{{$message}}</span>
+                    @enderror
                   </div>
+
                   <div class="form-group">
-                    <label for="inputName">วันครบกำหนดงาน</label>
-                    <input type="date" id="due_date" wire:model="due_date" class="form-control">
+                    <label for="inputName">กำหนดเวลาแจ้งเตือน</label>
+                    <input type="text" id="facuty_name" wire:model="faculty_name" class="form-control">
+                    @error('faculty_name')
+                        <span class ="text-danger">{{$message}}</span>
+                    @enderror
                   </div>
-                  <div class="form-group">
-                    <label for="inputName">ไฟล์ที่เกี่ยวข้อง</label>
-                    <input type="file" id="inputName" wire:model="file" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputStatus">ประเภทของงาน</label>
-                    <select id="inputStatus" wire:model="type" class="form-control custom-select">
-                      <option selected >Select one</option>
-                      <option value="computer">ประชุม</option>
-                      <option value="electric">ลาป่วย</option>
-                      <option value="plant">ไปราชการ</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputStatus">สถานะงาน</label>
-                    <select id="inputStatus" wire:model="task_status" class="form-control custom-select">
-                      <option selected >Select one</option>
-                      <option value="computer">เสร็จ</option>
-                      <option value="electric">ยังไม่เสร็จ</option>
-                    </select>
-                  </div>
+
                 </div>
                 <!-- /.card-body -->
               </div>

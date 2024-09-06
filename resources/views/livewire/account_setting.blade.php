@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>จัดการบัญชี</h1>
+                    <h1>จัดการข้อมูลบัญชี</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -41,7 +41,7 @@
                     <div class="card">
                         <div class="card-header p-2">
                             <ul class="nav nav-pills">
-                                <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a>
+                                <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">จัดการข้อมูลบัญชี</a>
                                 </li>
                             </ul>
                         </div><!-- /.card-header -->
@@ -90,7 +90,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <div class="offset-sm-2 col-sm-10">
-                                                <button type="submit" class="btn btn-danger">Submit</button>
+                                                <button type="submit" class="btn btn-danger">บันทึก</button>
                                             </div>
                                         </div>
                                     </form>

@@ -20,7 +20,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="{{route('home-dashboard')}}">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>หน้าหลัก</span></a>
                 </li>
@@ -39,7 +39,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">จัดการตารางงาน:</h6>
                             <a class="collapse-item" href="{{route('projects')}}">ตารางาน</a>
-                            <a class="collapse-item" href="{{route('addtask')}}">เพิ่มงาน</a>
+                            <a class="collapse-item" href="{{route('add-task')}}">จัดการการเพิ่มข้อมูลงาน</a>
                         </div>
                     </div>
                 </li>
@@ -48,7 +48,7 @@
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                         aria-expanded="true" aria-controls="collapseUtilities">
-                        <i class='fas fa-fw fa-male-female' ></i>
+                        <i class="fas fa-fw fa-user"></i>
                         <span>บุคลากร</span>
                     </a>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
@@ -56,7 +56,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">บุคลากร:</h6>
                             <a class="collapse-item" href="{{route('personal')}}">บุคลากร</a>
-                            <a class="collapse-item" href="{{route('addpersonal')}}">เพิ่มบุคลากร</a>
+                            <a class="collapse-item" href="{{route('addpersonal')}}">จัดการเพิ่มข้อมูลบุคลากร</a>
                         </div>
                     </div>
                 </li>

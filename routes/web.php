@@ -10,13 +10,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/dashboard', function () {
-    return view('/dashboard');
-});
+Route::get('/home-dashboard', function () {
+    return view('home-dashboard');
+})->name('home-dashboard');
 
 Route::get('/add-work', function () {
     return view('add');
@@ -34,10 +30,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-Route::get('/dashboard', function () {
-    return view('admin');
-})->name('dashboard');
-
 Route::get('/news', function () {
     return view('index');
 })->name('news');
@@ -46,10 +38,9 @@ Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
 
-Route::get('/addtask', function () {
-    return view('addtask');
-})->name('addtask');
-Route::post('/addtask', [ScheduleController::class, 'store'])->name('addtask.store');
+Route::get('/add-task', function () {
+    return view('project.add');
+})->name('add-task');
 
 
 Route::get('/project', function () {
@@ -92,11 +83,3 @@ Route::get('/project-viewtask/{id}', function ($id) {
     return view('project.viewtask', compact('id'));
 })->name('project-viewtask');
 
-Route::get('/project-add', function () {
-    return view('project.add');
-})->name('project-add');
-
-
-Route::get('/project-addtask', function () {
-    return view('livewire.project.addtask');
-})->name('project-addtask');

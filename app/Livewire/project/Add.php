@@ -1,11 +1,10 @@
 <?php
-namespace App\Http\Livewire\Tasks;
-
+namespace App\Livewire\Project;
 use App\Models\Task; // เปลี่ยนชื่อตัวแปรให้ตรงกับชื่อโมเดลที่ใช้ PascalCase
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class AddTask extends Component // เปลี่ยน Addtask เป็น AddTask
+class Add extends Component // เปลี่ยน Addtask เป็น AddTask
 {
     use WithFileUploads;
 
@@ -46,7 +45,7 @@ class AddTask extends Component // เปลี่ยน Addtask เป็น Ad
                 $task->save();
             }
 
-            return redirect()->to(route('project'));
+            return redirect()->to(route('home-dashboard')); //หลัง Login ไปที่หน้า home-dashboard
         } catch (\Exception $e) {
             dd($e);
         }
@@ -54,6 +53,6 @@ class AddTask extends Component // เปลี่ยน Addtask เป็น Ad
 
     public function render()
     {
-        return view('livewire.project.add-task');
+        return view('livewire.project.add'); //เรียก view ที่โฟลเดอร์ livewire/project/add
     }
 }

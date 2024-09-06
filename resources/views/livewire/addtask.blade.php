@@ -1,100 +1,100 @@
 @extends('layouts.backend.master')
 @section('content')
-<div>
-    <div class="content-wrapper">
-        <section class="content-header">
-          <div class="container-fluid">
-            <div class="row mb-2">
-              <div class="col-sm-6">
-                <h1>เพิ่มงาน</h1>
-              </div>
-              <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Add Task</li>
-                </ol>
-              </div>
-            </div>
-          </div><!-- /.container-fluid -->
-        </section>
+    <div>
+        <div class="content-wrapper">
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>จัดการการเพิ่มข้อมูลงาน</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Add Task</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
 
-        <!-- Main content -->
-    <section class="content">
-        <!-- Change form action to the appropriate route -->
-        <form action="{{ route('addtask') }}" method="POST" enctype="multipart/form-data>
-            @csrf
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card card-primary">
-                <div class="card-header">
-                  <h3 class="card-title">General</h3>
+            <!-- Main content -->
+            <section class="content">
+                <form wire:submit.prevent="add">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">จัดการการเพิ่มข้อมูลงาน</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
+                                            title="Collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="inputName">Task Name</label>
+                                        <input type="text" id="task_name" wire:model="task_name" class="form-control">
+                                        @error('task_name')
+                                            <span class ="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Task Detail</label>
+                                        <input type="text" id="task_detail" wire:model="task_detail"
+                                            class="form-control">
+                                        @error('task_detail')
+                                            <span class ="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Start Date</label>
+                                        <input type="date" id="start_date" wire:model="start_date" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Due Date</label>
+                                        <input type="date" id="due_date" wire:model="due_date" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">File</label>
+                                        <input type="file" id="inputName" wire:model="task_file" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputStatus">Task Type</label>
+                                        <select id="inputStatus" wire:model="task_type" class="form-control custom-select">
+                                            <option selected>Select one</option>
+                                            <option value="computer">ประชุม</option>
+                                            <option value="electric">ลาป่วย</option>
+                                            <option value="plant">ไปราชการ</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputStatus">Status</label>
+                                        <select id="inputStatus" wire:model="status_task"
+                                            class="form-control custom-select">
+                                            <option selected>Select one</option>
+                                            <option value="computer">เสร็จ</option>
+                                            <option value="electric">ยังไม่เสร็จ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="btn btn-secondary">ยกเลิก</a>
+                            <button type="submit" class="btn btn-success ">เพิ่ม</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
 
-                  <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="inputName">Task Name</label>
-                    <input type="text" id="inputName" name="task_name" class="form-control" value="{{ old('task_name') }}">
-                    @error('task_name')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                  </div>
-                  <div class="form-group">
-                    <label for="inputDetail">Task Detail</label>
-                    <input type="text" id="inputDetail" name="task_detail" class="form-control" value="{{ old('task_detail') }}">
-                    @error('task_detail')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                  </div>
-                  <div class="form-group">
-                    <label for="inputStartDate">Start Date</label>
-                    <input type="date" id="inputStartDate" name="start_date" class="form-control" value="{{ old('start_date') }}">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputDueDate">Due Date</label>
-                    <input type="date" id="inputDueDate" name="due_date" class="form-control" value="{{ old('due_date') }}">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputFile">File</label>
-                    <input type="file" id="inputFile" name="task_file" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputType">Task Type</label>
-                    <select id="inputType" name="task_type" class="form-control custom-select">
-                      <option selected>Select one</option>
-                      <option value="computer" {{ old('type') == 'computer' ? 'selected' : '' }}>ประชุม</option>
-                      <option value="electric" {{ old('type') == 'electric' ? 'selected' : '' }}>ลาป่วย</option>
-                      <option value="plant" {{ old('type') == 'plant' ? 'selected' : '' }}>ไปราชการ</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputStatus">Status</label>
-                    <select id="inputStatus" name="task_status" class="form-control custom-select">
-                      <option selected>Select one</option>
-                      <option value="computer" {{ old('task_status') == 'computer' ? 'selected' : '' }}>เสร็จ</option>
-                      <option value="electric" {{ old('task_status') == 'electric' ? 'selected' : '' }}>ยังไม่เสร็จ</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-              </div>
-              <!-- /.card -->
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <a href="#" class="btn btn-secondary">ยกเลิก</a>
-              <button type="submit" class="btn btn-success ">เพิ่ม</button>
-            </div>
-          </div>
-          </form>
-    </section>
-
-        <!-- /.content -->
-      </div>
+            <!-- /.content -->
+        </div>
     </div>
 @endsection
