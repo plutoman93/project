@@ -29,7 +29,6 @@
                         <div class="card card-primary">
                             <div class="card-header">
                                 <h3 class="card-title">จัดการการเพิ่มข้อมูลงาน</h3>
-                                <h3 class="card-title">General</h3>
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse"
                                         title="Collapse">
