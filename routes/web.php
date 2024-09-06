@@ -10,13 +10,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/dashboard', function () {
-    return view('/dashboard');
-});
+Route::get('/home-dashboard', function () {
+    return view('home-dashboard');
+})->name('home-dashboard');
 
 Route::get('/add-work', function () {
     return view('add');
@@ -33,10 +29,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [HomeController::class, 'index']);
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });
-
-Route::get('/dashboard', function () {
-    return view('admin');
-})->name('dashboard');
 
 Route::get('/news', function () {
     return view('index');
@@ -63,10 +55,6 @@ Route::get('/account-setting', function () {
 Route::get('/personal', function () {
     return view('personal');
 })->name('personal');
-
-Route::get('/home-dashboard', function () {
-    return view('home-dashboard');
-})->name('home-dashboard');
 
 Route::get('/addpersonal', function () {
     return view('addpersonal');
