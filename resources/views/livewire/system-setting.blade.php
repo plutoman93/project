@@ -6,12 +6,12 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>เพิ่มงาน</h1>
+                <h1>จัดการระบบ</h1>
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Add Task</li>
+                  <li class="breadcrumb-item active">System Setting</li>
                 </ol>
               </div>
             </div>
@@ -25,7 +25,7 @@
             <div class="col-md-12">
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">จัดการการเพิ่มงาน</h3>
+                  <h3 class="card-title">จัดการระบบ</h3>
 
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -35,8 +35,8 @@
                 </div>
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="inputName">ชื่องาน</label>
-                    <input type="text" id="task_name" wire:model="task_name" class="form-control">
+                    <label for="inputName">เพิ่มคำนำหน้า</label>
+                    <input type="text" id="title_name" wire:model="title_name" class="form-control">
                     @error('task_name')
                         <span class ="text-danger">{{$message}}</span>
                     @enderror

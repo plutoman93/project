@@ -17,8 +17,26 @@ class TitleFactory extends Factory
     public function definition(): array
     {
         return [
-            'title_id'=>$this->faker->unique()->numberBetween(1,10),
-            'title_name'=>$this->faker->title(),
+            'title_id'=>'01',
+            'title_name'=>'นาย',
+            'created_at'=> now(),
+            'updated_at' => now(),
+            'created_by'=> now(),
+            'updated_by' => now(),
+        ];
+
+        [
+            'title_id'=>'02',
+            'title_name'=>'นาง',
+            'created_at'=> now(),
+            'updated_at' => now(),
+            'created_by'=> now(),
+            'updated_by' => now(),
+        ];
+
+        [
+            'title_id'=>'03',
+            'title_name'=>'นางสาว',
             'created_at'=> now(),
             'updated_at' => now(),
             'created_by'=> now(),

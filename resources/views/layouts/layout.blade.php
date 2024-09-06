@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Include Sidebar -->
-            @include('sidebar')
+            {{-- @include('sidebar') --}}
 
             <!-- Main Content -->
             <div class="col-md-9 mt-4">

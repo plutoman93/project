@@ -15,11 +15,20 @@ class StatusFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition():array
     {
         return [
-            'user_status_id'=>$this->faker->numberBetween(10000,99999),
-            'user_status_name'=>$this->faker->title(),
+            'user_status_id'=>'01',
+            'user_status_name'=>'แอดมิน',
+            'created_at'=> now(),
+            'updated_at' => now(),
+            'created_by'=> now(),
+            'updated_by' => now(),
+        ];
+
+        [
+            'user_status_id'=>'02',
+            'user_status_name'=>'บัญชีทั่วไป',
             'created_at'=> now(),
             'updated_at' => now(),
             'created_by'=> now(),

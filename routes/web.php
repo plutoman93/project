@@ -54,6 +54,22 @@ Route::get('/project', function () {
     return view('projects');
 })->name('projects');
 
+Route::get('/account-setting', function () {
+    return view('account_setting');
+})->name('account_setting');
+
+Route::get('/personal', function () {
+    return view('personal');
+})->name('personal');
+
+Route::get('/addpersonal', function () {
+    return view('addpersonal');
+})->name('addpersonal');
+
+Route::get('/system-setting', function () {
+    return view('system-setting');
+})->name('system-setting');
+
 Route::get('/project-edit/{id}', function ($id) {
     //dd($id);
     return view('project.edit', compact('id'));
