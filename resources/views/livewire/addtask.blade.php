@@ -20,12 +20,18 @@
 
         <!-- Main content -->
     <section class="content">
-        <form wire:submit.prevent="add">
+        <!-- Change form action to the appropriate route -->
+        <form action="{{ route('addtask') }}" method="POST" enctype="multipart/form-data>
+            @csrf
           <div class="row">
             <div class="col-md-12">
               <div class="card card-primary">
                 <div class="card-header">
+<<<<<<< HEAD
                   <h3 class="card-title">จัดการการเพิ่มข้อมูลงาน</h3>
+=======
+                  <h3 class="card-title">General</h3>
+>>>>>>> 8057cf869797df955ecff48891c64dde972b2742
 
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -35,46 +41,46 @@
                 </div>
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="inputName">ชื่องาน</label>
-                    <input type="text" id="task_name" wire:model="task_name" class="form-control">
+                    <label for="inputName">Task Name</label>
+                    <input type="text" id="inputName" name="task_name" class="form-control" value="{{ old('task_name') }}">
                     @error('task_name')
-                        <span class ="text-danger">{{$message}}</span>
+                        <span class="text-danger">{{ $message }}</span>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="inputName">รายละเอียดงาน</label>
-                    <input type="text" id="task_detail" wire:model="task_detail" class="form-control">
+                    <label for="inputDetail">Task Detail</label>
+                    <input type="text" id="inputDetail" name="task_detail" class="form-control" value="{{ old('task_detail') }}">
                     @error('task_detail')
-                        <span class ="text-danger">{{$message}}</span>
+                        <span class="text-danger">{{ $message }}</span>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="inputName">วันที่เริ่มงาน</label>
-                    <input type="date" id="start_date" wire:model="start_date" class="form-control">
+                    <label for="inputStartDate">Start Date</label>
+                    <input type="date" id="inputStartDate" name="start_date" class="form-control" value="{{ old('start_date') }}">
                   </div>
                   <div class="form-group">
-                    <label for="inputName">วันครบกำหนดงาน</label>
-                    <input type="date" id="due_date" wire:model="due_date" class="form-control">
+                    <label for="inputDueDate">Due Date</label>
+                    <input type="date" id="inputDueDate" name="due_date" class="form-control" value="{{ old('due_date') }}">
                   </div>
                   <div class="form-group">
-                    <label for="inputName">ไฟล์ที่เกี่ยวข้อง</label>
-                    <input type="file" id="inputName" wire:model="file" class="form-control">
+                    <label for="inputFile">File</label>
+                    <input type="file" id="inputFile" name="task_file" class="form-control">
                   </div>
                   <div class="form-group">
-                    <label for="inputStatus">ประเภทของงาน</label>
-                    <select id="inputStatus" wire:model="type" class="form-control custom-select">
-                      <option selected >Select one</option>
-                      <option value="computer">ประชุม</option>
-                      <option value="electric">ลาป่วย</option>
-                      <option value="plant">ไปราชการ</option>
+                    <label for="inputType">Task Type</label>
+                    <select id="inputType" name="task_type" class="form-control custom-select">
+                      <option selected>Select one</option>
+                      <option value="computer" {{ old('type') == 'computer' ? 'selected' : '' }}>ประชุม</option>
+                      <option value="electric" {{ old('type') == 'electric' ? 'selected' : '' }}>ลาป่วย</option>
+                      <option value="plant" {{ old('type') == 'plant' ? 'selected' : '' }}>ไปราชการ</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="inputStatus">สถานะงาน</label>
-                    <select id="inputStatus" wire:model="task_status" class="form-control custom-select">
-                      <option selected >Select one</option>
-                      <option value="computer">เสร็จ</option>
-                      <option value="electric">ยังไม่เสร็จ</option>
+                    <label for="inputStatus">Status</label>
+                    <select id="inputStatus" name="task_status" class="form-control custom-select">
+                      <option selected>Select one</option>
+                      <option value="computer" {{ old('task_status') == 'computer' ? 'selected' : '' }}>เสร็จ</option>
+                      <option value="electric" {{ old('task_status') == 'electric' ? 'selected' : '' }}>ยังไม่เสร็จ</option>
                     </select>
                   </div>
                 </div>
@@ -95,4 +101,4 @@
         <!-- /.content -->
       </div>
     </div>
-    @endsection
+@endsection
