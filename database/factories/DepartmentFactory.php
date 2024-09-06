@@ -15,11 +15,11 @@ class DepartmentFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            'department_id'=>$this->faker->numberBetween(10000,99999),
-            'department_name' =>$this->faker->jobTitle(),
+            'department_id'=>'01',
+            'department_name' =>'เทคโนโลยีคอมพิวเตอร์',
             'faculty_id'=>$this->faker->numberBetween(10000,99999),
             'created_at'=> now(),
             'updated_at' => now(),

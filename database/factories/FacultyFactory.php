@@ -14,11 +14,12 @@ class FacultyFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
+            'department_id'=>'01',
+            'department_name' =>'เกษตรศาสตร์',
             'faculty_id'=>$this->faker->numberBetween(10000,99999),
-            'faculty_name'=>$this->faker->jobTitle(),
             'created_at'=> now(),
             'updated_at' => now(),
             'created_by'=> now(),

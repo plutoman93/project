@@ -9,6 +9,6 @@ class AccountSettingController extends Controller
 {
     public function index()
     {
-        return view('account-setting');
+        return view('account_setting');
     }
 }

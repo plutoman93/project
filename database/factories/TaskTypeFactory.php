@@ -17,8 +17,26 @@ class TaskTypeFactory extends Factory
     public function definition(): array
     {
         return [
-            'type_id'=>$this->faker->numberBetween(10000,99999),
-            'type_name'=>$this->faker->jobTitle(),
+            'type_id'=>'01',
+            'type_name'=>'ราชการ',
+            'created_at'=> now(),
+            'updated_at' => now(),
+            'created_by'=> now(),
+            'updated_by' => now(),
+        ];
+
+        [
+            'type_id'=>'02',
+            'type_name'=>'ลาป่วย',
+            'created_at'=> now(),
+            'updated_at' => now(),
+            'created_by'=> now(),
+            'updated_by' => now(),
+        ];
+
+        [
+            'type_id'=>'03',
+            'type_name'=>'ประชุม',
             'created_at'=> now(),
             'updated_at' => now(),
             'created_by'=> now(),

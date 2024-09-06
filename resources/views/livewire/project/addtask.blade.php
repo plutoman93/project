@@ -20,7 +20,9 @@
 
         <!-- Main content -->
     <section class="content">
-        <form wire:submit.prevent="add">
+        <!-- Change form action to the appropriate route -->
+        <form action="{{ route('addtask') }}" method="POST" enctype="multipart/form-data>
+            @csrf
           <div class="row">
             <div class="col-md-12">
               <div class="card card-primary">
@@ -36,45 +38,45 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="inputName">Task Name</label>
-                    <input type="text" id="inputName" wire:model="task_name" class="form-control">
+                    <input type="text" id="inputName" name="task_name" class="form-control" value="{{ old('task_name') }}">
                     @error('task_name')
-                        <span class ="text-danger">{{$message}}</span>
+                        <span class="text-danger">{{ $message }}</span>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="inputName">Task Detail</label>
-                    <input type="text" id="inputName" wire:model="task_detail" class="form-control">
+                    <label for="inputDetail">Task Detail</label>
+                    <input type="text" id="inputDetail" name="task_detail" class="form-control" value="{{ old('task_detail') }}">
                     @error('task_detail')
-                        <span class ="text-danger">{{$message}}</span>
+                        <span class="text-danger">{{ $message }}</span>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="inputName">Start Date</label>
-                    <input type="date" id="inputName" wire:model="task_start_date" class="form-control">
+                    <label for="inputStartDate">Start Date</label>
+                    <input type="date" id="inputStartDate" name="task_start_date" class="form-control" value="{{ old('task_start_date') }}">
                   </div>
                   <div class="form-group">
-                    <label for="inputName">Due Date</label>
-                    <input type="date" id="inputName" wire:model="task_due_date" class="form-control">
+                    <label for="inputDueDate">Due Date</label>
+                    <input type="date" id="inputDueDate" name="task_due_date" class="form-control" value="{{ old('task_due_date') }}">
                   </div>
                   <div class="form-group">
-                    <label for="inputName">File</label>
-                    <input type="file" id="inputName" wire:model="task_file" class="form-control">
+                    <label for="inputFile">File</label>
+                    <input type="file" id="inputFile" name="task_file" class="form-control">
                   </div>
                   <div class="form-group">
-                    <label for="inputStatus">Task Type</label>
-                    <select id="inputStatus" wire:model="task_type" class="form-control custom-select">
-                      <option selected >Select one</option>
-                      <option value="computer">ประชุม</option>
-                      <option value="electric">ลาป่วย</option>
-                      <option value="plant">ไปราชการ</option>
+                    <label for="inputType">Task Type</label>
+                    <select id="inputType" name="type" class="form-control custom-select">
+                      <option selected>Select one</option>
+                      <option value="computer" {{ old('type') == 'computer' ? 'selected' : '' }}>ประชุม</option>
+                      <option value="electric" {{ old('type') == 'electric' ? 'selected' : '' }}>ลาป่วย</option>
+                      <option value="plant" {{ old('type') == 'plant' ? 'selected' : '' }}>ไปราชการ</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="inputStatus">Status</label>
-                    <select id="inputStatus" wire:model="status_task" class="form-control custom-select">
-                      <option selected >Select one</option>
-                      <option value="computer">เสร็จ</option>
-                      <option value="electric">ยังไม่เสร็จ</option>
+                    <select id="inputStatus" name="task_status" class="form-control custom-select">
+                      <option selected>Select one</option>
+                      <option value="computer" {{ old('task_status') == 'computer' ? 'selected' : '' }}>เสร็จ</option>
+                      <option value="electric" {{ old('task_status') == 'electric' ? 'selected' : '' }}>ยังไม่เสร็จ</option>
                     </select>
                   </div>
                 </div>
@@ -86,7 +88,7 @@
           <div class="row">
             <div class="col-12">
               <a href="#" class="btn btn-secondary">Cancel</a>
-              <button type="submit" class="btn btn-success ">Add</button>
+              <button type="submit" class="btn btn-success">Add</button>
             </div>
           </div>
           </form>
@@ -95,4 +97,4 @@
         <!-- /.content -->
       </div>
     </div>
-    @endsection
+@endsection

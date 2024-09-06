@@ -17,3 +17,8 @@
   <link rel="stylesheet" href="{{asset('asset/backend/plugins/daterangepicker/daterangepicker.css') }}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('asset/backend/plugins/summernote/summernote-bs4.min.css') }}">
+  <link rel="stylesheet" href="{{asset('asset/backend/dist/css/sb-admin-2.min.css') }}">
+  <link rel="stylesheet" href="{{asset('asset/backend/dist/css/sb-admin-2.css') }}">
+  <link rel="stylesheet" href="{{asset('vendor/fontawesome-free/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{asset('vendor/datatables/dataTables.bootstrap4.min.css') }}">
+
