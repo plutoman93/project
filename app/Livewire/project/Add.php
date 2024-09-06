@@ -47,7 +47,7 @@ class Add extends Component // เปลี่ยน Addtask เป็น AddTas
 
             return redirect()->to(route('home-dashboard')); //หลัง Login ไปที่หน้า home-dashboard
         } catch (\Exception $e) {
-            dd($e);
+            // dd($e);
         }
     }
 
