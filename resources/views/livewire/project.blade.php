@@ -176,30 +176,22 @@
                 @foreach ($data as $item)
                 <tr>
                       <td>
-                          {{$item->user_id}}
+                          {{$item->task_id}}
                       </td>
                       <td>
                           <a>
-                              {{$item->name}}
+                              {{$item->task_name}}
                           </a>
-                          <br/>
-                          <small>
-                              {{$item->last_name}}
-                          </small>
                       </td>
                       <td>
-                          <ul class="list-inline">
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="{{asset('storage')}}/{{$item->profile_photo_path}}">
-                              </li>
-                          </ul>
-                      </td>
-                      <td class="project_progress">
-                        {{$item->email}}
-                      </td>
-                      <td class="project-state">
-                          <span class="badge badge-success">Success</span>
-                      </td>
+                        {{$item->start_date}}
+                    </td>
+                    <td>
+                        {{$item->due_date}}
+                    </td>
+                    <td>
+                        {{$item->task_status}}
+                    </td>
                       {{-- <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" href="{{route('project-view',['id' =>$item->id])}}">
                               <i class="fas fa-folder">

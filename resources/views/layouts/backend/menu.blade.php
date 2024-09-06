@@ -20,7 +20,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="{{route('')}}">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>หน้าหลัก</span></a>
                 </li>
@@ -39,7 +39,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">จัดการตารางงาน:</h6>
                             <a class="collapse-item" href="{{route('projects')}}">ตารางาน</a>
-                            <a class="collapse-item" href="{{route('addtask')}}">เพิ่มงาน</a>
+                            <a class="collapse-item" href="{{route('addtask')}}">จัดการการเพิ่มข้อมูลงาน</a>
                         </div>
                     </div>
                 </li>
@@ -56,7 +56,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">บุคลากร:</h6>
                             <a class="collapse-item" href="{{route('personal')}}">บุคลากร</a>
-                            <a class="collapse-item" href="{{route('addpersonal')}}">เพิ่มบุคลากร</a>
+                            <a class="collapse-item" href="{{route('addpersonal')}}">จัดการเพิ่มข้อมูลบุคลากร</a>
                         </div>
                     </div>
                 </li>

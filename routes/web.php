@@ -62,6 +62,10 @@ Route::get('/personal', function () {
     return view('personal');
 })->name('personal');
 
+Route::get('/home-dashboard', function () {
+    return view('home-dashboard');
+})->name('home-dashboard');
+
 Route::get('/addpersonal', function () {
     return view('addpersonal');
 })->name('addpersonal');
