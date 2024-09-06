@@ -72,6 +72,19 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
+.btn-logoutt {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    box-shadow: none;
+    display: block;
+    position: absolute; /* ทำให้ปุ่มสามารถวางตำแหน่งได้อย่างอิสระใน sidebar */
+    bottom: 50px; /* ห่างจากขอบล่างของ sidebar 50px */
+    left: 50%; /* กึ่งกลางในแนวนอน */
+    transform: translateX(-50%); /* ปรับให้อยู่กลางในแนวนอน */
+    margin: 0 auto;
+    width: 80%; /* กำหนดความกว้างของปุ่ม */
+}
 
 hr {
   box-sizing: content-box;
@@ -9900,8 +9913,8 @@ a:focus {
 }
 
 .bg-gradient-primary {
-  background-color: #4e73df;
-  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-color: #6c757d;
+  background-image: linear-gradient(180deg, #6c757d 10%, #6c757d 100%);
   background-size: cover;
 }
 
@@ -10509,7 +10522,7 @@ a:focus {
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 14rem !important;
+    width: 30rem !important;
   }
   .sidebar .nav-item .collapse {
     position: relative;

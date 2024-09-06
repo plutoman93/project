@@ -14,21 +14,21 @@ class TaskFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
-        return [
-            'task_id'=>$this->faker->numberBetween(10000,99999),
-            'task_name'=>$this->faker->jobTitle(),
-            'task_detail'=>$this->faker->word(),
-            'start_date'=>$this->faker->dateTime(),
-            'due_date'=>$this->faker->dateTime(),
-            'task_status_id'=>$this->faker->numberBetween(10000,99999),
-            'type_id'=>$this->faker->numberBetween(10000,99999),
-            'user_id'=>$this->faker->numberBetween(10000,99999),
-            'created_at'=> now(),
-            'updated_at' => now(),
-            'created_by'=> now(),
-            'updated_by' => now(),
-        ];
+        // return [
+        //     'task_id'=>$this->faker->numberBetween(10000,99999),
+        //     'task_name'=>$this->faker->jobTitle(),
+        //     'task_detail'=>$this->faker->word(),
+        //     'start_date'=>$this->faker->dateTime(),
+        //     'due_date'=>$this->faker->dateTime(),
+        //     'task_status_id'=>$this->faker->numberBetween(10000,99999),
+        //     'type_id'=>$this->faker->numberBetween(10000,99999),
+        //     'user_id'=>$this->faker->numberBetween(10000,99999),
+        //     'created_at'=> now(),
+        //     'updated_at' => now(),
+        //     'created_by'=> now(),
+        //     'updated_by' => now(),
+        // ];
     }
 }

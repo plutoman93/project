@@ -6,7 +6,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>Add Task</h1>
+                <h1>เพิ่มงาน</h1>
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -87,8 +87,8 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <a href="#" class="btn btn-secondary">Cancel</a>
-              <button type="submit" class="btn btn-success">Add</button>
+              <a href="#" class="btn btn-secondary">ยกเลิก</a>
+              <button type="submit" class="btn btn-success ">เพิ่ม</button>
             </div>
           </div>
           </form>
