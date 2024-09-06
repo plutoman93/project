@@ -20,7 +20,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route('')}}">
+                    <a class="nav-link" href="{{route('home-dashboard')}}">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>หน้าหลัก</span></a>
                 </li>
