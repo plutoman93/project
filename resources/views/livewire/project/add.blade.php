@@ -68,15 +68,15 @@
                                         <option value="ไปราชการ">ไปราชการ</option>
                                     </select>
                                 </div>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label for="inputStatus">Status</label>
                                     <select id="inputStatus" wire:model="status_task"
                                         class="form-control custom-select">
-                                        <option selected>Select one</option>
+                                        <option selected>Select one</option> //ปิดฟอร์ม สภานะงานเพราะอาจไม่ตรงกับโครงสร้างฟอร์มและการเก็บข้อมูล ?
                                         <option value="เสร็จ">เสร็จ</option>
                                         <option value="ยังไม่เสร็จ">ยังไม่เสร็จ</option>
                                     </select>
-                                </div>
+                                </div> --}}
                             </div>
                             <!-- /.card-body -->
                         </div>
