@@ -63,9 +63,9 @@
                                     <label for="inputStatus">Task Type</label>
                                     <select id="inputStatus" wire:model="task_type" class="form-control custom-select">
                                         <option selected>Select one</option>
-                                        <option value="computer">ประชุม</option>
-                                        <option value="electric">ลาป่วย</option>
-                                        <option value="plant">ไปราชการ</option>
+                                        <option value="ประชุม">ประชุม</option>
+                                        <option value="ลาป่วย">ลาป่วย</option>
+                                        <option value="ไปราชการ">ไปราชการ</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -73,8 +73,8 @@
                                     <select id="inputStatus" wire:model="status_task"
                                         class="form-control custom-select">
                                         <option selected>Select one</option>
-                                        <option value="computer">เสร็จ</option>
-                                        <option value="electric">ยังไม่เสร็จ</option>
+                                        <option value="เสร็จ">เสร็จ</option>
+                                        <option value="ยังไม่เสร็จ">ยังไม่เสร็จ</option>
                                     </select>
                                 </div>
                             </div>
