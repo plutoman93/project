@@ -9,15 +9,15 @@ class Task extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'task_name',
-        'task_detail',
-        'start_date',
-        'due_date',
-        'file',
-        'task_type',
-        'status_task'
-    ];
+    // protected $fillable = [
+    //     'task_name',
+    //     'task_detail',
+    //     'start_date',
+    //     'due_date',
+    //     'file',
+    //     'task_type',
+    //     'status_task'
+    // ];
 
     protected $guarded = [];
 
