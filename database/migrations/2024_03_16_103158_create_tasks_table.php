@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->string('task_id')->primary();
+            $table->id('task_id'); //แก้การประกาศ PrimaryKey
             $table->string('task_name');
+            $table->string('task_type'); //ชนิดงาน ?? หรือ type name ?
             $table->string('task_detail',100);
             $table->string('start_date');
             $table->string('due_date');
@@ -21,8 +22,8 @@ return new class extends Migration
             $table->foreignId('task_status_id')->index();
             $table->foreignId('type_id')->index();
             $table->foreignId('user_id')->index();
-            $table->timestamp('created_by');
-            $table->timestamp('updated_by');
+            $table->timestamp('created_by')->nullable();;
+            $table->timestamp('updated_by')->nullable();;
             $table->timestamps();
             $table->softDeletes();
         });

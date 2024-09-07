@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('titles', function (Blueprint $table) {
-            $table->string('title_id')->primary();
+            $table->id('title_id');
             $table->string('title_name');
-            $table->timestamp('created_by');
-            $table->timestamp('updated_by');
+            $table->timestamp('created_by')->nullable();;
+            $table->timestamp('updated_by')->nullable();;
             $table->timestamps();
             $table->softDeletes();
         });

@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('notifications', function (Blueprint $table) {
-            $table->string('noti_time_id')->primary();
+            $table->id('noti_time_id');
             $table->string('time_name');
             $table->string('time');
-            $table->timestamp('created_by');
-            $table->timestamp('updated_by');
+            $table->timestamp('created_by')->nullable();;
+            $table->timestamp('updated_by')->nullable();;
             $table->timestamps();
             $table->softDeletes();
         });

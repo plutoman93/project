@@ -52,11 +52,11 @@
                   </div>
                   <div class="form-group">
                     <label for="inputStartDate">Start Date</label>
-                    <input type="date" id="inputStartDate" name="task_start_date" class="form-control" value="{{ old('task_start_date') }}">
+                    <input type="date" id="inputStartDate" name="start_date" class="form-control" value="{{ old('start_date') }}">
                   </div>
                   <div class="form-group">
                     <label for="inputDueDate">Due Date</label>
-                    <input type="date" id="inputDueDate" name="task_due_date" class="form-control" value="{{ old('task_due_date') }}">
+                    <input type="date" id="inputDueDate" name="due_date" class="form-control" value="{{ old('due_date') }}">
                   </div>
                   <div class="form-group">
                     <label for="inputFile">File</label>
@@ -66,17 +66,17 @@
                     <label for="inputType">Task Type</label>
                     <select id="inputType" name="type" class="form-control custom-select">
                       <option selected>Select one</option>
-                      <option value="computer" {{ old('type') == 'computer' ? 'selected' : '' }}>ประชุม</option>
-                      <option value="electric" {{ old('type') == 'electric' ? 'selected' : '' }}>ลาป่วย</option>
-                      <option value="plant" {{ old('type') == 'plant' ? 'selected' : '' }}>ไปราชการ</option>
+                      <option value="ประชุม" {{ old('type') == 'ประชุม' ? 'selected' : '' }}>ประชุม</option>
+                      <option value="ลาป่วย" {{ old('type') == 'ลาป่วย' ? 'selected' : '' }}>ลาป่วย</option>
+                      <option value="ไปราชการ" {{ old('type') == 'ไปราชการ' ? 'selected' : '' }}>ไปราชการ</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="inputStatus">Status</label>
                     <select id="inputStatus" name="task_status" class="form-control custom-select">
                       <option selected>Select one</option>
-                      <option value="computer" {{ old('task_status') == 'computer' ? 'selected' : '' }}>เสร็จ</option>
-                      <option value="electric" {{ old('task_status') == 'electric' ? 'selected' : '' }}>ยังไม่เสร็จ</option>
+                      <option value="เสร็จ" {{ old('task_status') == 'เสร็จ' ? 'selected' : '' }}>เสร็จ</option>
+                      <option value="ยังไม่เสร็จ" {{ old('task_status') == 'ยังไม่เสร็จ' ? 'selected' : '' }}>ยังไม่เสร็จ</option>
                     </select>
                   </div>
                 </div>
