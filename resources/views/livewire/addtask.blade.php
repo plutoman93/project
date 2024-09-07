@@ -35,14 +35,14 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="inputName">Task Name</label>
+                                        <label for="inputName">ชื่องาน</label>
                                         <input type="text" id="task_name" wire:model="task_name" class="form-control">
                                         @error('task_name')
                                             <span class ="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputName">Task Detail</label>
+                                        <label for="inputName">รายละเอียดงาน</label>
                                         <input type="text" id="task_detail" wire:model="task_detail"
                                             class="form-control">
                                         @error('task_detail')
@@ -50,19 +50,19 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputName">Start Date</label>
+                                        <label for="inputName">วันเริ่มงาน</label>
                                         <input type="date" id="start_date" wire:model="start_date" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputName">Due Date</label>
+                                        <label for="inputName">วันครบกำหนดงาน</label>
                                         <input type="date" id="due_date" wire:model="due_date" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputName">File</label>
+                                        <label for="inputName">ไฟล์ที่เกี่ยวข้อง</label>
                                         <input type="file" id="inputName" wire:model="task_file" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputStatus">Task Type</label>
+                                        <label for="inputStatus">ประเภทงาน</label>
                                         <select id="inputStatus" wire:model="task_type" class="form-control custom-select">
                                             <option selected>Select one</option>
                                             <option value="computer">ประชุม</option>
@@ -71,7 +71,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputStatus">Status</label>
+                                        <label for="inputStatus">สถานะงาน</label>
                                         <select id="inputStatus" wire:model="status_task"
                                             class="form-control custom-select">
                                             <option selected>Select one</option>

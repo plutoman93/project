@@ -31,8 +31,8 @@ class Add extends Component // เปลี่ยน Addtask เป็น AddTas
             $task = Task::create([
                 'task_name' => $this->task_name,
                 'task_detail' => $this->task_detail,
-                'start_date' => $this->task_start_date,
-                'due_date' => $this->task_due_date,
+                'start_date' => $this->start_date,
+                'due_date' => $this->due_date, //$this-> คำสั่งในการเข้าถึงตัวแปร (จำเป็นต้องตรงกันและถูกต้องตามที่ประกาศใช้งานจริง)
                 'task_type' => $this->task_type,
                 'status_task' => $this->status_task,
                 // 'created_by' => auth()->user()->id, // ยืนยันว่าใช้ auth()->user() อย่างถูกต้อง
@@ -47,7 +47,7 @@ class Add extends Component // เปลี่ยน Addtask เป็น AddTas
 
             return redirect()->to(route('home-dashboard')); //หลัง Login ไปที่หน้า home-dashboard
         } catch (\Exception $e) {
-            dd($e);
+            // dd($e);
         }
     }
 
