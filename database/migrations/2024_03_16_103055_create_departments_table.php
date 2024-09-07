@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('departments', function (Blueprint $table) {
-            $table->string('department_id',5)->primary();
+            $table->id('department_id',5);
             $table->string('department_name');
             $table->foreignId('faculty_id',5)->index();
-            $table->timestamp('created_by');
-            $table->timestamp('updated_by');
+            $table->timestamp('created_by')->nullable();;
+            $table->timestamp('updated_by')->nullable();;
             $table->timestamps();
             $table->softDeletes();
         });
