@@ -72,19 +72,6 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
-.btn-logoutt {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
-    box-shadow: none;
-    display: block;
-    position: absolute; /* ทำให้ปุ่มสามารถวางตำแหน่งได้อย่างอิสระใน sidebar */
-    bottom: 50px; /* ห่างจากขอบล่างของ sidebar 50px */
-    left: 50%; /* กึ่งกลางในแนวนอน */
-    transform: translateX(-50%); /* ปรับให้อยู่กลางในแนวนอน */
-    margin: 0 auto;
-    width: 80%; /* กำหนดความกว้างของปุ่ม */
-}
 
 hr {
   box-sizing: content-box;

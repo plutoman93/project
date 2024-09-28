@@ -3181,19 +3181,7 @@ fieldset:disabled a.btn {
     box-shadow: 0 0 0 0 rgba(225, 83, 97, .5)
 }
 
-.btn-logout {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
-    box-shadow: none;
-    display: block;
-    position: absolute; /* ทำให้ปุ่มสามารถวางตำแหน่งได้อย่างอิสระใน sidebar */
-    bottom: 50px; /* ห่างจากขอบล่างของ sidebar 50px */
-    left: 50%; /* กึ่งกลางในแนวนอน */
-    transform: translateX(-50%); /* ปรับให้อยู่กลางในแนวนอน */
-    margin: 0 auto;
-    width: 80%; /* กำหนดความกว้างของปุ่ม */
-}
+
 .personal-item {
     background-color: red;
 }
@@ -3203,40 +3191,7 @@ fieldset:disabled a.btn {
     grid-template-columns: repeat(4) 1fr;
     grid-gap: 20px;
 }
-.btn-logout:hover {
-    color: #fff;
-    background-color: #c82333;
-    border-color: #bd2130
-}
 
-.btn-logout.focus,
-.btn-logout:focus {
-    color: #fff;
-    background-color: #c82333;
-    border-color: #bd2130;
-    box-shadow: 0 0 0 0 rgba(225, 83, 97, .5)
-}
-
-.btn-logout.disabled,
-.btn-logout:disabled {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545
-}
-
-.btn-logout:not(:disabled):not(.disabled).active,
-.btn-logout:not(:disabled):not(.disabled):active,
-.show>.btn-logout.dropdown-toggle {
-    color: #fff;
-    background-color: #bd2130;
-    border-color: #b21f2d
-}
-
-.btn-logout:not(:disabled):not(.disabled).active:focus,
-.btn-logout:not(:disabled):not(.disabled):active:focus,
-.show>.btn-logout.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0 rgba(225, 83, 97, .5)
-}
 
 .btn-light {
     color: #1f2d3d;
@@ -7760,10 +7715,60 @@ button.bg-dark:hover {
     display: table-cell !important
 }
 
+.btn-logout {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    box-shadow: none;
+    display: block;
+    position: absolute; /* ทำให้ปุ่มสามารถวางตำแหน่งได้อย่างอิสระใน sidebar */
+    bottom: 50px; /* ห่างจากขอบล่างของ sidebar 50px */
+    left: 50%; /* กึ่งกลางในแนวนอน */
+    transform: translateX(-50%); /* ปรับให้อยู่กลางในแนวนอน */
+    margin: 0 auto;
+    width: 80%; /* กำหนดความกว้างของปุ่ม */
+}
+
+.btn-logout:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130
+}
+
+.btn-logout.focus,
+.btn-logout:focus {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+    box-shadow: 0 0 0 0 rgba(225, 83, 97, .5)
+}
+
+.btn-logout.disabled,
+.btn-logout:disabled {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545
+}
+
+.btn-logout:not(:disabled):not(.disabled).active,
+.btn-logout:not(:disabled):not(.disabled):active,
+.show>.btn-logout.dropdown-toggle {
+    color: #fff;
+    background-color: #bd2130;
+    border-color: #b21f2d
+}
+
+.btn-logout:not(:disabled):not(.disabled).active:focus,
+.btn-logout:not(:disabled):not(.disabled):active:focus,
+.show>.btn-logout.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0 rgba(225, 83, 97, .5)
+}
+
 .d-flex {
     display: -ms-flexbox !important;
     display: flex !important
 }
+
 
 .d-inline-flex {
     display: -ms-inline-flexbox !important;
