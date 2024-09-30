@@ -17,9 +17,8 @@ class FacultyFactory extends Factory
     public function definition()
     {
         return [
-            'department_id'=>'01',
-            'department_name' =>'เกษตรศาสตร์',
-            'faculty_id'=>$this->faker->numberBetween(10000,99999),
+            'faculty_id'=>'01',
+            'faculty_name' =>'เกษตรศาสตร์และเทคโนโลยี',
             'created_at'=> now(),
             'updated_at' => now(),
             'created_by'=> now(),

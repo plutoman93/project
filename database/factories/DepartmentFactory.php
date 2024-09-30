@@ -20,7 +20,7 @@ class DepartmentFactory extends Factory
         return [
             'department_id'=>'01',
             'department_name' =>'เทคโนโลยีคอมพิวเตอร์',
-            'faculty_id'=>$this->faker->numberBetween(10000,99999),
+            'faculty_id'=>'01',
             'created_at'=> now(),
             'updated_at' => now(),
             'created_by'=> now(),
